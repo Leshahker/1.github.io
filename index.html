@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>10 дней любви ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <audio autoplay loop id="bgMusic">
+    <source src="audio/Король и Шут - Забытые Ботинки (1) [music].mp3" type="audio/mpeg">
+  </audio>
+  <audio id="finalSound">
+    <source src="https://www.myinstants.com/media/sounds/romantic-piano.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="mainContent">
+    <h1>A & A</h1>
+    <h2>10 дней любви ❤️</h2>
+    <input id="nameInput" type="text" placeholder="Любимая, как я тебя чаще всего называю?" />
+    <div class="hint" onclick="showHint()">подсказочка</div>
+    <div class="reveal" id="hintText">Зая 💖</div>
+    <button class="check-btn" onclick="checkName()">Проверить</button>
+    <div class="result" id="resultText">А теперь зая мы погрузимся в небольшое но очень как по мне романтичное приключение ✨</div>
+  </div>
+
+  <div class="love-story" id="loveStory">
+    <div class="typewriter">История любви...</div>
+    <div class="row">
+      <div class="text-block">Жил когда то парень Леша, он мечтал найти человека который сможет понять его нелегкую судьбу, с кем можно пообщаться. Исчерпав какие либо надежды он решил воспользоваться Тик Током. И вот 5 июля в 22:23 ему написала девочка Аля. Аля была очень красивая, с доброй душой. Леше сразу же понравилась Аля, но он стеснялся ей это сказать, потому что его другие девочки отвергали. Еще тогда никто не знал что эта случайная переписка станет историей большой любви...</div>
+      <div class="image-block">
+        <img src="img/IMG_20250723_170311.jpg" alt="im">
+      </div>
+    </div>
+    <div class="row reverse">
+      <div class="text-block">Время шло, ребята общались, все ближе и ближе друг друга узнавали, Леша уже понимал что ему нравиться Аля, но он боялся признаться в этом ей, Але тоже нравился Леша. И вот Леша решил, пойду да признамся в чувствах, он хотел это сделать вечером но... Аля его опередила, Леша безумно рыдал от счастья что Але нравиться он. Он стал самым счастливым человеком на свете... </div>
+      <div class="image-block">
+        <img src="img/Снимок экрана 2025-07-23 174003 копия.png" alt="Love Image 2">
+      </div>
+    </div>
+    <button class="next-btn" id="nextButton" style="display: none;" onclick="goToGallery()">Дальше ❤️</button>
+  </div>
+
+  <div class="gallery" id="gallery">
+    <div class="gallery-track">
+      <div class="gallery-item">
+        <img src="img/photo_2025-07-08_11-54-18.jpg" alt="Photo 1">
+        <div class="caption">Улыбка, которая стала для меня как наркотик</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/photo_2025-07-16_15-46-31.jpg" alt="Photo 2">
+        <div class="caption">Те самые глаза которые я готов видеть каждый день</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/photo_2025-07-05_23-20-42.jpg" alt="Photo 3">
+        <div class="caption">Человек которого боги создали🙏</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/photo_2025-07-22_23-08-13.jpg" alt="Photo 4">
+        <div class="caption">Бесподобная фигура ради которой я встану на колени</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/photo_2025-07-08_11-54-18.jpg" alt="Photo 1">
+        <div class="caption">Улыбка, которая стала для меня как наркотик</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/photo_2025-07-16_15-46-31.jpg" alt="Photo 2">
+        <div class="caption">Те самые глаза которые я готов видеть каждый день</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/photo_2025-07-05_23-20-42.jpg" alt="Photo 3">
+        <div class="caption">Человек которого боги создали🙏</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/photo_2025-07-22_23-08-13.jpg" alt="Photo 4">
+        <div class="caption">Бесподобная фигура ради которой я встану на колени</div>
+      </div>
+    </div>
+    <div class="gallery-overlay">
+      <div class="gallery-track">
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-08_11-54-18.jpg" alt="Photo 1">
+          <div class="caption">Улыбка, которая стала для меня как наркотик</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-16_15-46-31.jpg" alt="Photo 2">
+          <div class="caption">Те самые глаза которые я готов видеть каждый день</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-05_23-20-42.jpg" alt="Photo 3">
+          <div class="caption">Человек которого боги создали🙏</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-22_23-08-13.jpg" alt="Photo 4">
+          <div class="caption">Бесподобная фигура ради которой я встану на колени</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-08_11-54-18.jpg" alt="Photo 1">
+          <div class="caption">Улыбка, которая стала для меня как наркотик</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-16_15-46-31.jpg" alt="Photo 2">
+          <div class="caption">Те самые глаза которые я готов видеть каждый день</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-05_23-20-42.jpg" alt="Photo 3">
+          <div class="caption">Человек которого боги создали🙏</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-22_23-08-13.jpg" alt="Photo 4">
+          <div class="caption">Бесподобная фигура ради которой я встану на колени</div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-overlay">
+      <div class="gallery-track">
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-08_11-54-18.jpg" alt="Photo 1">
+          <div class="caption">Улыбка, которая стала для меня как наркотик</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-16_15-46-31.jpg" alt="Photo 2">
+          <div class="caption">Те самые глаза которые я готов видеть каждый день</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-05_23-20-42.jpg" alt="Photo 3">
+          <div class="caption">Человек которого боги создали🙏</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-22_23-08-13.jpg" alt="Photo 4">
+          <div class="caption">Бесподобная фигура ради которой я встану на колени</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-08_11-54-18.jpg" alt="Photo 1">
+          <div class="caption">Улыбка, которая стала для меня как наркотик</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-16_15-46-31.jpg" alt="Photo 2">
+          <div class="caption">Те самые глаза которые я готов видеть каждый день</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-05_23-20-42.jpg" alt="Photo 3">
+          <div class="caption">Человек которого боги создали🙏</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-22_23-08-13.jpg" alt="Photo 4">
+          <div class="caption">Бесподобная фигура ради которой я встану на колени</div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-overlay">
+      <div class="gallery-track">
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-08_11-54-18.jpg" alt="Photo 1">
+          <div class="caption">Улыбка, которая стала для меня как наркотик</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-16_15-46-31.jpg" alt="Photo 2">
+          <div class="caption">Те самые глаза которые я готов видеть каждый день</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-05_23-20-42.jpg" alt="Photo 3">
+          <div class="caption">Человек которого боги создали🙏</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-22_23-08-13.jpg" alt="Photo 4">
+          <div class="caption">Бесподобная фигура ради которой я встану на колени</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-08_11-54-18.jpg" alt="Photo 1">
+          <div class="caption">Улыбка, которая стала для меня как наркотик</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-16_15-46-31.jpg" alt="Photo 2">
+          <div class="caption">Те самые глаза которые я готов видеть каждый день</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-05_23-20-42.jpg" alt="Photo 3">
+          <div class="caption">Человек которого боги создали🙏</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/photo_2025-07-22_23-08-13.jpg" alt="Photo 4">
+          <div class="caption">Бесподобная фигура ради которой я встану на колени</div>
+        </div>
+      </div>
+    </div>
+    <button class="final-btn" id="galleryNextButton" onclick="goToFinal()">Дальше ❤️</button>
+  </div>
+
+  <div class="final-page" id="finalPage">
+    <div class="final-message">Я БЕЗУМНО ЛЮБЛЮ ТЕБЯ КОТЯ!</div>
+    <div class="final-submessage">Теперь беги к своему разработчику, и скажи как сильно ты его любишь ❤️</div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
